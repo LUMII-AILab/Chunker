@@ -1,0 +1,110 @@
+<project name="Chunker" default="clean-dist-all" basedir=".">
+
+	<description>
+        Build file for Chunker project
+    </description>
+	
+  <!-- set global properties for this build -->
+  <property name="java.src" location="src/main/java"/>
+  <property name="pl.src" location="src/main/prolog"/>
+  <property name="bin.src" location="src/main/bin"/>
+  <property name="resources" location="src/main/resources"/>
+  <property name="build" location="build"/>
+  <property name="dist" location="dist"/>
+  <property name="dist.min" location="${dist}/min"/>
+  <property name="dist.full" location="${dist}/full"/>
+  <property name="dist.embedded" location="${dist}/embedded"/>
+  <property name="dist.standalone" location="${dist}/standalone"/>
+  <property name="morphology.dir" location="../Morphology"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+  </target>
+
+  <target name="compile" depends="init"
+        description="compile the source " >
+    <subant buildpath="${morphology.dir}" target="dist" verbose="true"/>
+    <!-- Compile the java code from ${java.src} into ${build} -->
+    <javac source="1.5" encoding="UTF-8" srcdir="${java.src}" classpath="${morphology.dir}/dist/morphology.jar:src/common/resources/pl/lib/jpl.jar" destdir="${build}"/>
+  </target>
+
+  <target name="dist-min" depends="compile"
+        description="generate the minimal distribution without dependencies" >
+    <!-- Create the minimal distribution directory -->
+    <mkdir dir="${dist.min}"/>
+    <!-- Put everything in ${build} into the chunker[-{DSTAMP}${TSTAMP}].jar file -->
+    <jar jarfile="${dist.min}/chunker.jar" basedir="${build}"/>
+    <copy todir="${dist.min}">
+      <fileset dir="${pl.src}"/>
+    </copy>
+    <copy todir="${dist.min}">
+      <fileset dir="${bin.src}"/>
+    </copy>
+    <copy file="src/common/resources/COPYING.txt" todir="${dist.min}"/>
+  	<copy file="src/common/resources/README.txt" todir="${dist.min}"/>
+  </target>
+
+  <target name="dist-full" depends="dist-min"
+        description="generate the full distribution with dependencies" >
+    <!-- Create the full distribution directory -->
+    <mkdir dir="${dist.full}"/>
+    <copy todir="${dist.full}">
+      <fileset dir="${dist.min}"/>
+    </copy>
+    <copy file="${morphology.dir}/dist/morphology.jar" todir="${dist.full}"/>
+  	<copy todir="${dist.full}">
+  	  	  		<fileset dir="${morphology.dir}/dist" includes="Lexicon*.xml"/>
+  	</copy>
+  	<copy file="${morphology.dir}/dist/Exceptions.txt" todir="${dist.full}"/>
+    <copy file="${morphology.dir}/dist/TagSet.xml" todir="${dist.full}"/>
+  </target>
+
+  <target name="dist-embedded" depends="dist-full"
+      description="generate the embeddable distribution" >
+    <!-- Create the embeddable distribution directory -->
+    <mkdir dir="${dist.embedded}"/>
+    <copy todir="${dist.embedded}/pl">
+      <fileset dir="src/common/resources/pl"/>
+    </copy>
+    <copy todir="${dist.embedded}/src">
+      <fileset dir="${pl.src}"/>
+    </copy>
+    <copy file="src/common/resources/COPYING.txt" todir="${dist.embedded}"/>  	
+    <jar jarfile="${dist.embedded}/src/chunker.jar" basedir="${build}"/>
+    <copy file="${morphology.dir}/dist/morphology.jar" todir="${dist.embedded}/src"/>
+  	<copy todir="${dist.embedded}">
+  	  	  		<fileset dir="${morphology.dir}/dist" includes="Lexicon*.xml"/>
+  	</copy>
+  	<copy file="${morphology.dir}/dist/Exceptions.txt" todir="${dist.embedded}"/>
+    <copy file="${morphology.dir}/dist/TagSet.xml" todir="${dist.embedded}"/>
+  </target>
+	
+  <target name="dist-standalone" depends="dist-embedded"
+      description="generate the fully stand-alone distribution" >
+    <!-- Create the standalone distribution directory -->
+    <mkdir dir="${dist.standalone}"/>
+    <copy todir="${dist.standalone}">
+      <fileset dir="${dist.embedded}"/>
+    </copy>
+  </target>
+
+  <target name="clean"
+      description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+  </target>
+
+  <target name="clean-deps" depends=""
+          description="clean all dependency projects" >
+    <subant buildpath="${morphology.dir}" target="clean" verbose="true"/>
+  </target>
+	
+  <target name="clean-dist-all" depends="clean,clean-deps,dist-standalone"
+          description="clean and generate all distributions" >
+  </target>
+
+</project>

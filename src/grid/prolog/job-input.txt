@@ -1,0 +1,60 @@
+*Ðis raksts izdrukâts no TVNET portâla*
+http://www.tvnet.lv/printArticle.php?id=154795
+
+	
+
+*Hakeri uzbrûk banku pakalpojumu lietotâjiem*
+
+FINANCENET
+
+23. marts (2007)
+12:19
+		Izdrukât </printArticle.php?id=154795>
+Piedalîties diskusijâ par ðo rakstu
+<comments.php?oid=154795&tab=news> (*5*)
+</nozares/bankas/comments.php?oid=154795&tab=news>
+
+
+*22. martâ interneta apritç parâdîjâs jauni surogâtpasta vçstuïu
+uzbrukumi. Ðâdi sûtîjumi ir hakeru ìenerçti e-pasti. Nordea atgâdina, ka
+nekad neizsûta e-pasta vçstules un nezvana klientiem ar lûgumu atklât
+identifikâcijas kodus, kredîtkarðu numurus, PIN paroles vai citu
+konfidenciâlu informâciju, Financenet informçja Nordea Latvija
+Sabiedrisko attiecîbu daïas vadîtâjs Kristians Pudans.*
+------------------------------------------------------------------------
+
+Saòemot ðâdu e-pasta sûtîjumu, tas momentâni ir jâizdzçð.
+
+Vairâku banku klienti Skandinâvijâ un arî Baltijas valstîs ir saòçmuði
+e-pastus, kuros angïu valodâ skaidrots, ka Nordea droðîbas departaments
+pieprasa veikt klienta informâcijas apstiprinâðanas procedûru. E-pastâ
+uzrâdîta adrese, uz kuras uzklikðíinot atveras ”it kâ Nordea
+internetbankas” lapa, kurâ tiek pieprasîts norâdît klienta rezidences
+valsti, vârdu un uzvârdu, telefona numuru, kâ arî aizpildît trûkstoðos
+laukus ar internetbankas parolçm un kodiem.
+
+Vçstules ar uzaicinâjumu atklât savus identifikâcijas kodus un Trojas
+zirgiem nav jauns pasaules fenomens - pastâvîgi tiek radîti un izplatîti
+daþâdi surogâtpastu un vîrusu paveidi. Vîrusi un vçstules ar aicinâjumu
+atklât savus autorizâcijas kodus (physing), tai skaitâ bankas
+pakalpojumu izmantoðanas kanâlu informâciju, piemçram, karðu,
+internetbankas u.c. kodus, ir starptautiska problçma. Tâpçc interneta
+pakalpojumu sniedzçju uzdevums ir uzraudzît datoru droðîbas sistçmu
+prasîbas atbilstoði ðodienas vajadzîbâm un identificçt jaunus uzbrukuma
+kanâlus un formas.
+
+Banka arî atgâdina, ka klienti ir atbildîgi par rîcîbu ar bankas
+izsniegtajiem identifikâcijas datiem atbilstoði lîguma noteikumiem un
+datoru aprîkoðanu ar antivîrusu programmnodroðinâjumu un to atjaunoðanu.
+Savukârt Nordea internetbankas informâcijas laukos uztur paziòojumu
+klientiem par iespçjamiem kriminâla rakstura vçstuïu uzbrukumiem, kuru
+mçríis ir uzrunât klientus atklât maksâjumu karðu vai internetbankas
+identifikâcijas kodus. Kâ arî Nordea klientus nodroðina ar trîs lîmeòu
+lietotâju autorizâciju un lîdz ar to aizsardzîbu (lietotâja
+identifikâcijas numurs, identifikâcijas kods un darîjuma apstiprinâjuma
+kods), kas tiek uzskatîta par vienu no droðâkajiem attâlinâtâs
+apkalpoðanas kanâlu lietotâju identifikâcijas standartiem. Gadîjumâ, ja
+banka prasa jebkâdu informâciju transakcijas veikðanai, tas var tikt
+darîts vienîgi izmantojot Internetbanku, piekïûstot tai pçc parastas
+klientu autorizâcijas. Ðâdâ veidâ mçs varam identificçt klientu, un
+klients varat païauties, ka tâ patiesi ir Nordea, ar kuru klients sazinâs.
