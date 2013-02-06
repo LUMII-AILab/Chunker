@@ -45,6 +45,7 @@ b([apzīmētājs, nr2], [a, f, GEND, NUM, CASE, _, DEG], [n, _, GEND, NUM, CASE,
 b([apzīmētājs, nr2_1], [a, f, GEND, NUM, CASE, y, s], [n, _, GEND, NUM, CASE, _], left).
 b([apzīmētājs, nr3], [m, T, _, GEND, NUM, CASE, _], [n, _, GEND, NUM, CASE, _], left):-member(T, [c, o]).
 b([apzīmētājs, nr3_1], [m, T, _, 0, NUM, 0, _], [n, _, _, NUM, _, _], left):-member(T, [c, o]).
+b([apzīmētājs, nr3_2], [x, T], [n, _, _, _, _, _], left):-member(T, [n, o]).
 b([apzīmētājs, nr4], [n, _, _, _, CASE, _], [n, _, _, _, _, _], left):-member(CASE, [g, s]).
 b([apzīmētājs, nr5], [n, _, _, _, d, _], [n, _, _, _, _, _], right).
 b([apzīmētājs, nr6], [p, d, 3, GEND, NUM, CASE, _, [_]], [n, _, GEND, NUM, CASE, _], left).

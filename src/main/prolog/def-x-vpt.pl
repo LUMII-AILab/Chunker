@@ -253,7 +253,7 @@ x([[_, [z, c]], [_, [n, c, GEND, NUM, CASE, _]], [_, [z, c]]], [[_], _, [_]], [s
 x([[_, [z, c]], [_, [n, c, GEND, NUM, CASE, _]]], [[_], _], [spk, [n, c, GEND, NUM, CASE, 0, [spk, sp]]], spk_11).
 x([[_, [z, c]], [_, [a, T, GEND, NUM, CASE, n, p]], [_, [z, c]]], [[_], _, [_]], [spk, [a, T, GEND, NUM, CASE, n, p, [spk, sa]]], spk_12).
 x([[_, [z, c]], [_, [a, T, GEND, NUM, CASE, n, p]]], [[_], _], [spk, [a, T, GEND, NUM, CASE, n, p, [spk, sa]]], spk_13).
-x([[kā, [q, s]], [_, [n, c, GEND, NUM, CASE, _]]], [[_], _], [spk, [n, c, GEND, NUM, CASE, 0, [spk, sd]]], spk_14).
+x([[kā, [c, s, s]], [_, [n, c, GEND, NUM, CASE, _]]], [[_], _], [spk, [n, c, GEND, NUM, CASE, 0, [spk, sd]]], spk_14).
 
 % Prepositions
 x([[PRE, [s, p, NUM, CASE, [PLACE]]], [_, [n, T, GEND, NUM, CASE, _]]], [[_], _], [prievārdeklis, [n, T, GEND, NUM, CASE, 0, [pre, PLACE, PRE]]], pre_1).
@@ -334,3 +334,6 @@ x([[nevis, [c, c, d]], [_, [r, _, _]], [',', [z, c]], [bet, [c, c, d]], [_, [r, 
 x([[te, [c, c, r]], [_, [r, _, _]], [',', [z, c]], [te, [c, c, r]], [_, [r, _, _]]], [[_], _, [_], [_], _], [apvienojums, [r, _, _]], vtl_52).
 x([[vai_nu, [c, c, d]], [_, [r, _, _]], [',', [z, c]], [vai, [c, c, d]], [_, [r, _, _]]], [[_], _, [_], [_], _], [apvienojums, [r, _, _]], vtl_53).
 x([[vai, [c, c, r]], [_, [r, _, _]], [',', [z, c]], [vai, [c, c, r]], [_, [r, _, _]]], [[_], _, [_], [_], _], [apvienojums, [r, _, _]], vtl_54).
+
+% named entities
+x([[_, [n, p, GEND, NUM, CASE, _]], [_, [n, p, GEND, NUM, CASE, _]]], [[_], [_]], [named_entity, [n, p, GEND, NUM, CASE, 0]], named_entity_1).

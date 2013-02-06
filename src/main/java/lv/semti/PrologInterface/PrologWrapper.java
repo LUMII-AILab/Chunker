@@ -91,7 +91,7 @@ public class PrologWrapper {
 	
 	public static String toProlog(String word, boolean toolgenerated) {
 		Word vards = analyzer.analyze(word);		
-		return MarkupConverter.WordToChunkerFormat(vards, toolgenerated);
+		return MarkupConverter.wordToChunkerFormat(vards, toolgenerated);
 	}
 
 }

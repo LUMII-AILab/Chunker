@@ -34,11 +34,8 @@ import lv.semti.morphology.analyzer.Word;
 @SuppressWarnings("unchecked")
 public class ChunkerInterface {
 	
-	private int čunkvarianti; 
-		
 	public ChunkerInterface(String čunkerfolderis) throws UnsatisfiedLinkError, Exception {
-		//String [] args = {"pl","-g","true","-nosignals","-q","-L128m","-G128m"};
-		String [] args = {"pl","-g","true","-nosignals","-q"};		// Lauma, Prolog 5.10.5
+		String [] args = {"pl","-g","true","-nosignals","-q"};		
 		JPL.setDefaultInitArgs(args);
 		
 		// Ieimportējam čunkera prologa failus
@@ -118,7 +115,6 @@ public class ChunkerInterface {
         	return new ArrayList<ChunkerVariant>();
         } 
 
-	    čunkvarianti = 0;
 	    ArrayList<ChunkerVariant> rezults = apstaigātAtbildi(answer);
 	    return rezults;        	
 	}
@@ -146,8 +142,6 @@ public class ChunkerInterface {
 				Term first = c.arg(1);
 				Term second = c.arg(2);				
 					    
-				čunkvarianti++;
-			    
 			    // variantu pārveido uz kastīšu html
 				Query query = new Query("chunks_html", new Term[] { first, new Variable("OUT") });
 				Hashtable<String,Term> solution = query.oneSolution();
