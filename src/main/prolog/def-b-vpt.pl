@@ -86,7 +86,6 @@ b([tiešais_papildinātājs, nr1], [n, _, _, _, a, _], [v, m, _, MOOD, _, t, _, 
 b([tiešais_papildinātājs, nr1_1], [n, _, _, _, a, _], [v, m, _, MOOD, _, TRANS, _, _, _, a, _, [T, _, _, _]], _):-member(MOOD, [i, r, c]) ,  member(TRANS, [t, 0]) ,  member(T, [act, modal, modal_red, phase, phase_red, expr]).
 b([tiešais_papildinātājs, nr2], [n, _, _, _, n, _], [v, m, _, d, _, t, _, 0, 0, a|_], _).
 b([tiešais_papildinātājs, nr2_1], [n, _, _, _, d, _], [v, m, n, d, p, 0, 0, 0, _, p, n, [pass, s, _, d]], _).
-b([tiešais_papildinātājs, nr3], [n, _, GEND, NUM, n, _], [v, m, n, MOOD, _, 0, 0, _, NUM, p, _, [pass, _, GEND, n]], _):-member(MOOD, [i, r, c]).
 b([tiešais_papildinātājs, nr4], [n, _, _, _, a, _], [v, m, _, p, d, _, _, _, a, s, n], _).
 b([tiešais_papildinātājs, nr5], [p, _, _, _, _, a, _, [_]], [v, m, _, MOOD, _, t, _, _, _, VOICE, _], _):-member(MOOD, [i, r, c, m, n]) ,  member(VOICE, [a, 0]).
 b([tiešais_papildinātājs, nr5_1], [p, _, _, _, _, a, _, [_]], [v, m, _, MOOD, _, TRANS, _, _, _, a, _, [T, _, _, _]], _):-member(MOOD, [i, r, c]) ,  member(TRANS, [t, 0]) ,  member(T, [act, modal, modal_red, phase, phase_red, expr]).
@@ -140,6 +139,8 @@ b([teikuma_priekšmets, nr27], [p, _, _, GEND, NUM, n, _, [_]], [v, m, _, MOOD, 
 b([teikuma_priekšmets, nr28], [p, _, _, 0, NUM, n, _, [_]], [v, m, _, MOOD, _, 0, 0, _, NUM, a, _, [act, p, _, n]], _):-member(MOOD, [i, c, r]).
 b([teikuma_priekšmets, nr29], [n, _, _, _, d, _], [v, m, _, d, 0, _, _, 0, 0, a, _], _).
 b([teikuma_priekšmets, nr30], [n, _, GEND, NUM, n, _], [v, m, _, p, d, GEND, NUM, n, a, s, n], _).
+% pārnests no tiešā papildinātāja
+b([teikuma_priekšmets, nrx3], [n, _, GEND, NUM, n, _], [v, m, n, MOOD, _, 0, 0, _, NUM, p, _, [pass, _, GEND, n]], _):-member(MOOD, [i, r, c]).
 
 % Semi-predicative components
 b([spk, nr1], [v, m, _, n, 0, _, _, 0, 0, 0, _], [v, m, _, _, _, _, _, _, _, _, _, [T, _, _, _]], _):-member(T, [modal, phase, expr]).

@@ -253,7 +253,7 @@ x([[_, [z, c]], [_, [n, c, GEND, NUM, CASE, _]], [_, [z, c]]], [[_], _, [_]], [s
 x([[_, [z, c]], [_, [n, c, GEND, NUM, CASE, _]]], [[_], _], [spk, [n, c, GEND, NUM, CASE, 0, [spk, sp]]], spk_11).
 x([[_, [z, c]], [_, [a, T, GEND, NUM, CASE, n, p]], [_, [z, c]]], [[_], _, [_]], [spk, [a, T, GEND, NUM, CASE, n, p, [spk, sa]]], spk_12).
 x([[_, [z, c]], [_, [a, T, GEND, NUM, CASE, n, p]]], [[_], _], [spk, [a, T, GEND, NUM, CASE, n, p, [spk, sa]]], spk_13).
-x([[kā, [c, s, s]], [_, [n, c, GEND, NUM, CASE, _]]], [[_], _], [spk, [n, c, GEND, NUM, CASE, 0, [spk, sd]]], spk_14).
+x([[kā, [c, s, s]], [_, [n, c, GEND, NUM, CASE, _]]], [[_], _], [simile, [n, c, GEND, NUM, CASE, 0, [spk, sd]]], spk_14).
 
 % Prepositions
 x([[PRE, [s, p, NUM, CASE, [PLACE]]], [_, [n, T, GEND, NUM, CASE, _]]], [[_], _], [prievārdeklis, [n, T, GEND, NUM, CASE, 0, [pre, PLACE, PRE]]], pre_1).
@@ -273,7 +273,11 @@ x([[_, [m, c, _, 0, p, 0, [s]]], [_, [m, T, s, GEND, NUM, CASE, [v]]]], [[_], [_
 x([[_, [m, c, _, 0, p, 0, [s]]], [_, [m, T, c, 0, p, 0, [O]]]], [[_], [_]], [skaitlis, [m, T, j, 0, p, 0, [s]]], num_3):-member(O, [d, p]).
 
 % Appositions
-x([[_, [n, c, GEND, NUM, CASE, _]], [_, [n, p, GEND, NUM, CASE, _]]], [[_], [_]], [pielikums, [n, p, GEND, NUM, CASE, 0]], app_1).
+x([[_, [n, c, GEND, NUM, CASE, _]], [_, [n, p, GEND, NUM, CASE, _]]], [[_], [_]], [pielikums, [n, 0, GEND, NUM, CASE, 0]], app_1).
+%x([[sia, [y]], [_, [n, _, GEND, NUM, CASE, _]]], [[_], [_]], [pielikums, [n, 0, GEND, NUM, CASE, 0]], app_2).
+%x([[vsia, [y]], [_, [n, _, GEND, NUM, CASE, _]]], [[_], [_]], [pielikums, [n, 0, GEND, NUM, CASE, 0]], app_3).
+%x([[as, [y]], [_, [n, _, GEND, NUM, CASE, _]]], [[_], [_]], [pielikums, [n, 0, GEND, NUM, CASE, 0]], app_4).
+%x([[vas, [y]], [_, [n, _, GEND, NUM, CASE, _]]], [[_], [_]], [pielikums, [n, 0, GEND, NUM, CASE, 0]], app_5).
 
 % Coordinated parts of sentence (nouns)
 x([[_, [n, _, _, _, CASE, _]], [',', [z, c]], [_, [n, _, _, _, CASE, _]]], [_, [_], _], [apvienojums, [n, _, _, p, CASE, 0]], vtl_1).
@@ -337,3 +341,6 @@ x([[vai, [c, c, r]], [_, [r, _, _]], [',', [z, c]], [vai, [c, c, r]], [_, [r, _,
 
 % named entities
 x([[_, [n, p, GEND, NUM, CASE, _]], [_, [n, p, GEND, NUM, CASE, _]]], [[_], [_]], [named_entity, [n, p, GEND, NUM, CASE, 0]], named_entity_1).
+
+% nosaukums pēdiņās
+x([ [_, [z, q]], [_, ELEM], [_, [z, q]]], [[_], _, [_]], [quot, ELEM], quoted_1).
