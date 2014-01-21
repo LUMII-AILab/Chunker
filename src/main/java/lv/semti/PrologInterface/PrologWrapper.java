@@ -61,7 +61,7 @@ public class PrologWrapper {
 		analyzer.enableGuessing = (guessNouns || guessVerbs || guessParticiples || guessAdjectives);
 		analyzer.guessNouns = guessNouns;
 		analyzer.guessVerbs = guessVerbs;
-		analyzer.guessParticibles = guessParticiples;
+		analyzer.guessParticiples = guessParticiples;
 		analyzer.guessAdjectives = guessAdjectives;
 		analyzer.enableVocative = allowVocative;
 		analyzer.enableDiminutive = enableDiminutive;
