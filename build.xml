@@ -40,9 +40,6 @@
     <copy todir="${dist.min}">
       <fileset dir="${pl.src}"/>
     </copy>
-    <copy todir="${dist.min}">
-      <fileset dir="${bin.src}"/>
-    </copy>
     <copy file="src/common/resources/COPYING.txt" todir="${dist.min}"/>
   	<copy file="src/common/resources/README.txt" todir="${dist.min}"/>
   </target>
